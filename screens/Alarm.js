@@ -22,5 +22,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'black'
   },
+  titleText: {
+    fontWeight: "bold",
+    fontSize: 50,
+    padding: 20,
+    color: "white",
+    alignSelf: 'center'
+  },
+  text:{
+    color:'white', 
+    fontWeight:'bold', 
+    padding: 20, 
+    alignSelf:'center',
+    fontSize: 20
+  }
 });
