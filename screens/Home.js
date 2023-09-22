@@ -5,7 +5,12 @@ export default class Home extends React.Component {
   render(){
     return (
       <View>
-        <Text> Home Screen </Text> 
+        <Text> Home Screen </Text>
+        <TouchableOpacity onPress={()=>{
+          this.props.navigation.navigate("Home");
+        }}>
+          <Text style={styles.text}> Go Back </Text>
+        </TouchableOpacity>
       </View>
     );
   }
