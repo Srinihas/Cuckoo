@@ -5,7 +5,12 @@ export default class Events extends React.Component {
   render(){
     return (
       <View>
-        <Text> Events Screen </Text> 
+        <Text> Events Screen </Text>
+      <TouchableOpacity onPress={()=>{
+          this.props.navigation.navigate("Home");
+        }}>
+          <Text style={styles.text}> Go Back </Text>
+        </TouchableOpacity>
       </View>
     );
   }
