@@ -5,7 +5,12 @@ export default class Alarm extends React.Component {
   render(){
     return (
       <View>
-        <Text> Alarm Screen </Text> 
+        <Text> Alarm Screen </Text>
+      <TouchableOpacity onPress={()=>{
+          this.props.navigation.navigate("Home");
+        }}>
+          <Text style={styles.text}> Go Back </Text>
+        </TouchableOpacity>
       </View>
     );
   }
