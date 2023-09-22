@@ -1,15 +1,23 @@
 import * as React from 'react';
-import { View, TouchableOpacity, Text, StyleSheet, Flatlist} from 'react-native';
+import { View, TouchableOpacity, Text, StyleSheet, Flatlist, SafeAreaView, Dimensions} from 'react-native';
 
 export default class Home extends React.Component {
   render(){
     return (
-      <View>
-        <Text> Home Screen </Text>
+      <View style={{backgroundColor: "black", width: Dimensions.get('window').width}}>
+        <View>
+          <Text style={styles.titleText}> Home Screen </Text>
+        </View>
         <TouchableOpacity onPress={()=>{
-          this.props.navigation.navigate("Home");
+          this.props.navigation.navigate("Alarms")
         }}>
-          <Text style={styles.text}> Go Back </Text>
+          <Text style={styles.text}> Alarms </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={()=>{
+          this.props.navigation.navigate("Events")
+        }}>
+          <Text  style={styles.text}> Events </Text>
         </TouchableOpacity>
       </View>
     );
@@ -23,4 +31,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  titleText: {
+    fontWeight: "bold",
+    fontSize: 50,
+    padding: 20,
+    color: "white",
+    alignSelf: 'center'
+  },
+  text:{
+    color:'white', 
+    fontWeight:'bold', 
+    padding: 20, 
+    alignSelf:'center',
+    fontSize: 20
+  }
 });
